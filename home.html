@@ -1,0 +1,405 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lasith Perera | Portfolio</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      scroll-behavior:smooth;
+    }
+
+    body{
+      font-family:'Poppins',sans-serif;
+      background:#0f172a;
+      color:white;
+      line-height:1.6;
+    }
+
+    a{
+      text-decoration:none;
+      color:white;
+    }
+
+    header{
+      position:fixed;
+      width:100%;
+      top:0;
+      z-index:1000;
+      background:rgba(15,23,42,0.95);
+      backdrop-filter:blur(10px);
+      border-bottom:1px solid rgba(255,255,255,0.1);
+    }
+
+    nav{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:20px 8%;
+    }
+
+    .logo{
+      font-size:1.5rem;
+      font-weight:700;
+      color:#38bdf8;
+    }
+
+    .nav-links{
+      display:flex;
+      gap:30px;
+    }
+
+    .nav-links a{
+      transition:0.3s;
+    }
+
+    .nav-links a:hover{
+      color:#38bdf8;
+    }
+
+    section{
+      padding:100px 8%;
+    }
+
+    .hero{
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:40px;
+    }
+
+    .hero-text h1{
+      font-size:4rem;
+      line-height:1.2;
+    }
+
+    .hero-text span{
+      color:#38bdf8;
+    }
+
+    .hero-text p{
+      margin-top:20px;
+      color:#cbd5e1;
+      max-width:600px;
+    }
+
+    .btn-group{
+      margin-top:30px;
+      display:flex;
+      gap:20px;
+    }
+
+    .btn{
+      padding:12px 25px;
+      border-radius:10px;
+      font-weight:600;
+      transition:0.3s;
+    }
+
+    .primary-btn{
+      background:#38bdf8;
+      color:#0f172a;
+    }
+
+    .primary-btn:hover{
+      transform:translateY(-3px);
+    }
+
+    .secondary-btn{
+      border:1px solid #38bdf8;
+    }
+
+    .secondary-btn:hover{
+      background:#38bdf8;
+      color:#0f172a;
+    }
+
+    .hero-image img{
+      width:320px;
+      border-radius:20px;
+      border:4px solid #38bdf8;
+      box-shadow:0 0 40px rgba(56,189,248,0.4);
+    }
+
+    .section-title{
+      font-size:2.5rem;
+      margin-bottom:40px;
+      color:#38bdf8;
+      text-align:center;
+    }
+
+    .about-container{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:40px;
+      align-items:center;
+    }
+
+    .skills{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+      gap:20px;
+    }
+
+    .skill-card{
+      background:#1e293b;
+      padding:20px;
+      border-radius:15px;
+      text-align:center;
+      transition:0.3s;
+    }
+
+    .skill-card:hover{
+      transform:translateY(-5px);
+      background:#38bdf8;
+      color:#0f172a;
+    }
+
+    .projects-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+      gap:30px;
+    }
+
+    .project-card{
+      background:#1e293b;
+      padding:25px;
+      border-radius:20px;
+      transition:0.3s;
+    }
+
+    .project-card:hover{
+      transform:translateY(-5px);
+    }
+
+    .project-card h3{
+      margin-bottom:15px;
+      color:#38bdf8;
+    }
+
+    .project-links{
+      margin-top:20px;
+      display:flex;
+      gap:15px;
+    }
+
+    .contact{
+      text-align:center;
+    }
+
+    .contact p{
+      margin:15px 0;
+      color:#cbd5e1;
+    }
+
+    footer{
+      text-align:center;
+      padding:30px;
+      border-top:1px solid rgba(255,255,255,0.1);
+      color:#94a3b8;
+    }
+
+    @media(max-width:900px){
+
+      .hero{
+        flex-direction:column;
+        text-align:center;
+        padding-top:120px;
+      }
+
+      .about-container{
+        grid-template-columns:1fr;
+      }
+
+      .hero-text h1{
+        font-size:3rem;
+      }
+
+      .nav-links{
+        gap:15px;
+        font-size:0.9rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <nav>
+    <div class="logo">Lasith.</div>
+
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+</header>
+
+<section class="hero">
+
+  <div class="hero-text">
+    <h1>
+      Hi, I'm <span>Lasith Perera</span>
+    </h1>
+
+    <p>
+      Computer Science undergraduate specializing in Artificial Intelligence,
+      Machine Learning, and Software Engineering. Passionate about building
+      intelligent systems and scalable web applications.
+    </p>
+
+    <div class="btn-group">
+      <a href="Lasith_Perera_CV.pdf" class="btn primary-btn" download>
+        Download Resume
+      </a>
+
+      <a href="#projects" class="btn secondary-btn">
+        View Projects
+      </a>
+    </div>
+  </div>
+
+  <div class="hero-image">
+    <img src="ChatGPT Image May 12, 2026, 02_28_17 PM.png" alt="Profile Photo">
+  </div>
+
+</section>
+
+<section id="about">
+
+  <h2 class="section-title">About Me</h2>
+
+  <div class="about-container">
+
+    <div>
+      <p>
+        I am a Computer Science student at Swinburne University majoring in Artificial Intelligence.
+        I have hands-on experience in Machine Learning, Deep Learning, Web Development,
+        and Data Analytics.
+      </p>
+
+      <br>
+
+      <p>
+        I enjoy building real-world AI applications including traffic prediction systems,
+        predictive analytics dashboards, and intelligent web applications.
+      </p>
+    </div>
+
+    <div class="skills">
+
+      <div class="skill-card">Python</div>
+      <div class="skill-card">Java</div>
+      <div class="skill-card">TensorFlow</div>
+      <div class="skill-card">Machine Learning</div>
+      <div class="skill-card">SQL</div>
+      <div class="skill-card">Streamlit</div>
+      <div class="skill-card">GitHub</div>
+      <div class="skill-card">XGBoost</div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<section id="projects">
+
+  <h2 class="section-title">Projects</h2>
+
+  <div class="projects-grid">
+
+    <div class="project-card">
+      <h3>Traffic Flow Prediction System</h3>
+
+      <p>
+        AI-powered traffic prediction system using LSTM, GRU, CNN,
+        and XGBoost models for intelligent transport analysis.
+      </p>
+
+      <div class="project-links">
+        <a href="https://github.com/lasithCharuka" class="btn secondary-btn">
+          GitHub
+        </a>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <h3>Archery Score Prediction</h3>
+
+      <p>
+        Machine learning application using XGBoost and Streamlit
+        to predict archery scores with real-time analytics.
+      </p>
+
+      <div class="project-links">
+        <a href="https://github.com/lasithCharuka" class="btn secondary-btn">
+          GitHub
+        </a>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <h3>Olympic Medal Prediction</h3>
+
+      <p>
+        Predictive machine learning model using historical Olympic
+        datasets and regression algorithms.
+      </p>
+
+      <div class="project-links">
+        <a href="https://github.com/lasithCharuka" class="btn secondary-btn">
+          GitHub
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+<section id="contact" class="contact">
+
+  <h2 class="section-title">Contact</h2>
+
+  <p>Email: pereralasith775@gmail.com</p>
+
+  <p>Phone: 0447070185</p>
+
+  <p>Melbourne, Victoria, Australia</p>
+
+  <div class="btn-group" style="justify-content:center;">
+
+    <a href="https://www.linkedin.com/in/lasith-charuka-67623a232"
+       class="btn primary-btn">
+       LinkedIn
+    </a>
+
+    <a href="https://github.com/lasithCharuka"
+       class="btn secondary-btn">
+       GitHub
+    </a>
+
+  </div>
+
+</section>
+
+<footer>
+  © 2026 Lasith Perera | Portfolio Website
+</footer>
+
+</body>
+</html>
+```
